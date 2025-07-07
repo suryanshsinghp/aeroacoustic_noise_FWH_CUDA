@@ -1,0 +1,111 @@
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -c FWH.cu -o FWH.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -c sound_direc.cu -o sound_direc.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -c sound_pressure.cu -o sound_pressure.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -c calc_load.cu -o calc_load.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -c cal_direction_vec.cu -o cal_direction_vec.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo -dlink FWH.o sound_direc.o sound_pressure.o calc_load.o cal_direction_vec.o -o device_link.o
+nvcc -std=c++17 -O3 -arch=sm_80 -rdc=true -use_fast_math -lineinfo FWH.o sound_direc.o sound_pressure.o calc_load.o cal_direction_vec.o device_link.o -o out
+./out
+After copying data to device: Free memory: 6165 MB out of total 12281.5 MB
+sound_pressure (theta: 1, phi: 1) execution time: 58456 µs.
+sound_pressure (theta: 2, phi: 1) execution time: 56959 µs.
+sound_pressure (theta: 3, phi: 1) execution time: 55981 µs.
+sound_pressure (theta: 4, phi: 1) execution time: 56206 µs.
+sound_pressure (theta: 5, phi: 1) execution time: 56082 µs.
+sound_pressure (theta: 6, phi: 1) execution time: 56339 µs.
+sound_pressure (theta: 7, phi: 1) execution time: 56637 µs.
+sound_pressure (theta: 8, phi: 1) execution time: 56325 µs.
+sound_pressure (theta: 9, phi: 1) execution time: 56191 µs.
+sound_pressure (theta: 10, phi: 1) execution time: 56193 µs.
+sound_pressure (theta: 1, phi: 2) execution time: 56157 µs.
+sound_pressure (theta: 2, phi: 2) execution time: 56278 µs.
+sound_pressure (theta: 3, phi: 2) execution time: 55624 µs.
+sound_pressure (theta: 4, phi: 2) execution time: 56391 µs.
+sound_pressure (theta: 5, phi: 2) execution time: 63449 µs.
+sound_pressure (theta: 6, phi: 2) execution time: 56061 µs.
+sound_pressure (theta: 7, phi: 2) execution time: 56626 µs.
+sound_pressure (theta: 8, phi: 2) execution time: 56479 µs.
+sound_pressure (theta: 9, phi: 2) execution time: 56352 µs.
+sound_pressure (theta: 10, phi: 2) execution time: 56896 µs.
+sound_pressure (theta: 1, phi: 3) execution time: 57369 µs.
+sound_pressure (theta: 2, phi: 3) execution time: 56831 µs.
+sound_pressure (theta: 3, phi: 3) execution time: 56464 µs.
+sound_pressure (theta: 4, phi: 3) execution time: 57182 µs.
+sound_pressure (theta: 5, phi: 3) execution time: 56338 µs.
+sound_pressure (theta: 6, phi: 3) execution time: 56346 µs.
+sound_pressure (theta: 7, phi: 3) execution time: 56511 µs.
+sound_pressure (theta: 8, phi: 3) execution time: 56199 µs.
+sound_pressure (theta: 9, phi: 3) execution time: 56958 µs.
+sound_pressure (theta: 10, phi: 3) execution time: 56326 µs.
+sound_pressure (theta: 1, phi: 4) execution time: 56657 µs.
+sound_pressure (theta: 2, phi: 4) execution time: 60482 µs.
+sound_pressure (theta: 3, phi: 4) execution time: 56339 µs.
+sound_pressure (theta: 4, phi: 4) execution time: 56293 µs.
+sound_pressure (theta: 5, phi: 4) execution time: 59488 µs.
+sound_pressure (theta: 6, phi: 4) execution time: 56513 µs.
+sound_pressure (theta: 7, phi: 4) execution time: 56681 µs.
+sound_pressure (theta: 8, phi: 4) execution time: 56811 µs.
+sound_pressure (theta: 9, phi: 4) execution time: 57044 µs.
+sound_pressure (theta: 10, phi: 4) execution time: 56680 µs.
+sound_pressure (theta: 1, phi: 5) execution time: 56364 µs.
+sound_pressure (theta: 2, phi: 5) execution time: 56435 µs.
+sound_pressure (theta: 3, phi: 5) execution time: 56563 µs.
+sound_pressure (theta: 4, phi: 5) execution time: 56537 µs.
+sound_pressure (theta: 5, phi: 5) execution time: 56401 µs.
+sound_pressure (theta: 6, phi: 5) execution time: 56470 µs.
+sound_pressure (theta: 7, phi: 5) execution time: 56239 µs.
+sound_pressure (theta: 8, phi: 5) execution time: 56392 µs.
+sound_pressure (theta: 9, phi: 5) execution time: 56303 µs.
+sound_pressure (theta: 10, phi: 5) execution time: 57068 µs.
+sound_pressure (theta: 1, phi: 6) execution time: 56017 µs.
+sound_pressure (theta: 2, phi: 6) execution time: 55703 µs.
+sound_pressure (theta: 3, phi: 6) execution time: 58301 µs.
+sound_pressure (theta: 4, phi: 6) execution time: 55999 µs.
+sound_pressure (theta: 5, phi: 6) execution time: 55925 µs.
+sound_pressure (theta: 6, phi: 6) execution time: 56159 µs.
+sound_pressure (theta: 7, phi: 6) execution time: 56304 µs.
+sound_pressure (theta: 8, phi: 6) execution time: 56570 µs.
+sound_pressure (theta: 9, phi: 6) execution time: 56552 µs.
+sound_pressure (theta: 10, phi: 6) execution time: 55933 µs.
+sound_pressure (theta: 1, phi: 7) execution time: 56156 µs.
+sound_pressure (theta: 2, phi: 7) execution time: 56404 µs.
+sound_pressure (theta: 3, phi: 7) execution time: 55846 µs.
+sound_pressure (theta: 4, phi: 7) execution time: 56068 µs.
+sound_pressure (theta: 5, phi: 7) execution time: 56198 µs.
+sound_pressure (theta: 6, phi: 7) execution time: 56150 µs.
+sound_pressure (theta: 7, phi: 7) execution time: 56263 µs.
+sound_pressure (theta: 8, phi: 7) execution time: 56041 µs.
+sound_pressure (theta: 9, phi: 7) execution time: 56484 µs.
+sound_pressure (theta: 10, phi: 7) execution time: 56085 µs.
+sound_pressure (theta: 1, phi: 8) execution time: 55835 µs.
+sound_pressure (theta: 2, phi: 8) execution time: 55935 µs.
+sound_pressure (theta: 3, phi: 8) execution time: 56136 µs.
+sound_pressure (theta: 4, phi: 8) execution time: 56177 µs.
+sound_pressure (theta: 5, phi: 8) execution time: 55860 µs.
+sound_pressure (theta: 6, phi: 8) execution time: 56552 µs.
+sound_pressure (theta: 7, phi: 8) execution time: 55623 µs.
+sound_pressure (theta: 8, phi: 8) execution time: 55803 µs.
+sound_pressure (theta: 9, phi: 8) execution time: 56007 µs.
+sound_pressure (theta: 10, phi: 8) execution time: 56005 µs.
+sound_pressure (theta: 1, phi: 9) execution time: 55987 µs.
+sound_pressure (theta: 2, phi: 9) execution time: 56284 µs.
+sound_pressure (theta: 3, phi: 9) execution time: 56313 µs.
+sound_pressure (theta: 4, phi: 9) execution time: 55570 µs.
+sound_pressure (theta: 5, phi: 9) execution time: 56058 µs.
+sound_pressure (theta: 6, phi: 9) execution time: 56043 µs.
+sound_pressure (theta: 7, phi: 9) execution time: 55941 µs.
+sound_pressure (theta: 8, phi: 9) execution time: 55878 µs.
+sound_pressure (theta: 9, phi: 9) execution time: 56033 µs.
+sound_pressure (theta: 10, phi: 9) execution time: 56425 µs.
+sound_pressure (theta: 1, phi: 10) execution time: 55552 µs.
+sound_pressure (theta: 2, phi: 10) execution time: 101023 µs.
+sound_pressure (theta: 3, phi: 10) execution time: 55802 µs.
+sound_pressure (theta: 4, phi: 10) execution time: 56273 µs.
+sound_pressure (theta: 5, phi: 10) execution time: 56269 µs.
+sound_pressure (theta: 6, phi: 10) execution time: 56518 µs.
+sound_pressure (theta: 7, phi: 10) execution time: 56221 µs.
+sound_pressure (theta: 8, phi: 10) execution time: 56040 µs.
+sound_pressure (theta: 9, phi: 10) execution time: 56206 µs.
+sound_pressure (theta: 10, phi: 10) execution time: 56242 µs.
+sound_directivity execution time: 6 s.
+Entire code execution time: 71 s.
